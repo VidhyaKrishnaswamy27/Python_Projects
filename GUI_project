@@ -1,0 +1,44 @@
+from tkinter import *
+
+window=Tk()
+window.title("My first GUI-Miles to KM converter")
+window.minsize(400,300)
+window.config(padx=20,pady=20)
+
+# Entry
+entry_box = Entry(width=10)
+entry_box.grid(row=0, column=1)
+
+#Label
+my_label_1= Label(text="miles", font=("Arial",10,"bold"))
+my_label_1.grid(row=0, column=2)
+
+my_label_2= Label(text="is equal to ", font=("Arial",10,"bold"))
+my_label_2.grid(row=1, column=0)
+
+my_label_3= Label(text=" ", font=("Arial",10,"bold"))
+my_label_3.grid(row=1, column=1)
+
+my_label_4= Label(text="Kilometers ", font=("Arial",10,"bold"))
+my_label_4.grid(row=1, column=2)
+
+# Button
+def mtokm_converter():
+    miles = float(entry_box.get())
+    km = miles * 1.6
+    my_label_3.config(text=km)
+
+button=Button(text="Calculate", command=mtokm_converter,font=("Arial",10,"bold"))
+button.grid(row=2, column=1)
+
+
+
+
+
+
+
+
+
+
+
+window.mainloop()
