@@ -1,0 +1,18 @@
+import requests
+from bs4 import BeautifulSoup
+import ytmusicapi
+
+date=input("Which year would you like to travel to? Type the in YYYY-MM-DD format")
+# print(date)
+url=f"https://appbrewery.github.io/bakeboard-hot-100/{date}/"
+# print(url)
+response=requests.get(url)
+web_page=response.text
+soup=BeautifulSoup(web_page,"html.parser")
+# songs=soup.find_all(name="h3",class_="chart-entry__title")
+# print(songs)
+song_list=[song.getText()  for song in soup.find_all(name="h3",class_="chart-entry__title")]
+print(song_list)
+
+
+
