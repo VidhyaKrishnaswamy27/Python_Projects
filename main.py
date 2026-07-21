@@ -21,8 +21,8 @@ product=soup.find(name="span",id="productTitle").getText().split("\n")[0]
 print(product)
 
 # if amazon_price<100:
-#     email="krishnaswamy.vidhya@gmail.com"
-#     password="tqkmkgsrbhaytmsd"
+#     email="****@gmail.com"
+#     password="***"
 #
 #     with smtplib.SMTP("smtp.gmail.com",587) as server:
 #         server.starttls()
